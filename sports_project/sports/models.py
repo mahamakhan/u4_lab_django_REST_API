@@ -14,7 +14,7 @@ class Team(models.Model):
             return self.name
 
 class Players(models.Model):
-    team=models.ForeignKey(Team, on_delete=models.CASCADE, related_name='player')
+    team=models.ForeignKey(Team, on_delete=models.CASCADE, related_name='players')
     name=models.CharField(max_length=100)
     position=models.CharField(max_length=100)
     age=models.IntegerField()
